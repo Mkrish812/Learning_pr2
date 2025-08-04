@@ -9,6 +9,8 @@
   --font-montserrat: "Montserrat", sans-serif;
    --color-primary: #fafafa;
   --color-secondary: #f7f7f7;
+  --color-card-right:#fcfcfc;
+  --color-card-left:#f2f2f2;
 }
 
 @utility container {
