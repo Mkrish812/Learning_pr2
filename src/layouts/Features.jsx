@@ -15,10 +15,11 @@ export default function Features() {
 
   const handleMouseMove = (e,ref) => {
     const card = ref.current;
-    console.log(card);
+    // console.log(card);
 
     const rect = card.getBoundingClientRect();
-
+    // console.log(rect);
+    
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
@@ -27,6 +28,8 @@ export default function Features() {
 
     const rotateX = ((y - centerY) / centerY) * -10;
     const rotateY = ((x - centerX) / centerX) * 10;
+    console.log(`rotateX(${rotateX}deg) rotateY(${rotateY}deg)`);
+    
     card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
   };
   const handleMouseLeave = (e) => {
