@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+    <div class=" fixed top-0 flex flex-col gap-5">
+        <div id="data" class=" bg-red-500 text-white "></div>
+    <div id="data1" class=" bg-red-500 text-white "></div>
+    <div id="data2" class=" bg-red-500 text-white "></div>
+    <div id="data3" class=" bg-red-500 text-white "></div>
+    <div id="data4" class=" bg-red-500 text-white "></div>
+    </div>
+    
+
+    <div class="h-screen"></div>
+    <div class="h-screen"></div>
+    <div class="h-screen"></div>
+    <div class="h-screen"></div>
+    <div class="h-screen"></div>
+    
+
+    <script>
+        window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY; // distance from top
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+
+  console.log(`Scrolled: ${scrollPercent.toFixed(2)}%`);
+  document.getElementById("data").innerHTML = `Scrolled: ${scrollPercent.toFixed(2)}%`
+  document.getElementById("data1").innerHTML = `docHeight: ${docHeight}`
+  document.getElementById("data2").innerHTML = `scrollTop: ${scrollTop.toFixed(2)}`
+  document.getElementById("data3").innerHTML = `scroll height: ${document.documentElement.scrollHeight.toFixed(2)}`
+  document.getElementById("data4").innerHTML = `innerHeight: ${window.innerHeight.toFixed(2)}`
+});
+
+    </script>
+</body>
+</html>
