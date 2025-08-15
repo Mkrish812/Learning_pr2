@@ -37,7 +37,7 @@ export default function Features() {
     card.style.transform = "rotateX(0deg) rotateY(0deg)";
   };
   return (
-    <Element name="features" className="mt-10 bg-primary ">
+    <Element name="features" className="mt-10 ">
       <div className="container">
         <div className="flex flex-col py-10 gap-5 ">
           <h3 className="bg-white py-1 px-3 text-sm text-gray-500 rounded-3xl shadow-xl mx-auto">
@@ -121,6 +121,7 @@ export default function Features() {
           </div>
         </div>
       </div>
+
     </Element>
   );
 }

@@ -11,7 +11,20 @@
   --color-secondary: #f7f7f7;
   --color-card-right:#fcfcfc;
   --color-card-left:#f2f2f2;
+  --color-arc-blue:#ebf2ff;
+   --animate-slow-spin: slow-spin 6s linear infinite;
+
 }
+
+@keyframes slow-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 @utility container {
   @apply mx-auto px-6 md:px-12;
@@ -46,6 +59,17 @@
 * {
   scrollbar-width: thin;   
 }
+
+.no-scrollbar {
+  scrollbar-width: none;      /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari, Edge */
+}
+
+
+
 
 
 

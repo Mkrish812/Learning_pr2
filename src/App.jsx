@@ -3,6 +3,9 @@ import NavBar from "./layouts/NavBar";
 import Home from "./layouts/Home";
 import Features from "./layouts/Features";
 import Integrations from "./layouts/Integrations";
+import HowWorks from "./layouts/HowWorks";
+import Pricing from "./layouts/Pricing";
+
 
 
 
@@ -16,6 +19,10 @@ export default function App() {
       <Home />
       <Features />
       <Integrations />
+      <HowWorks />
+      <Pricing />
+
+      <div className="h-screen"></div>
       
     </>
   );

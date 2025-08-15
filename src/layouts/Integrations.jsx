@@ -5,11 +5,11 @@ import i2 from "../assets/integrations/i2.png";
 import i3 from "../assets/integrations/i3.png";
 import i4 from "../assets/integrations/i4.png";
 import i5 from "../assets/integrations/i5.png";
-import { useParallax } from "react-scroll-parallax";
+import { useParallax, useParallaxController } from "react-scroll-parallax";
 
 export default function Integrations() {
   const [eleProgress, setEleProgress] = useState(0);
-  const [ixtrans, setIxtrans] = useState(0);
+  const parallaxController = useParallaxController();
 
   // Multi refs for each image container
   const eleRefs = useRef([]);
@@ -27,18 +27,21 @@ export default function Integrations() {
     { image: i5, rotation: "rotate-[140deg]" },
   ];
 
+  useEffect(() => {
+    parallaxController.update();
+  }, []);
+
   // Update translateX based on scroll progress
   useEffect(() => {
     const value = eleProgress * 100;
-    if (value <= 16) {
-      const computedIxtrans = value * -5;
-      setIxtrans(computedIxtrans);
-      eleRefs.current.forEach((el) => {
-        if (el) {
-          el.style.transform = `translateX(${computedIxtrans}px)`;
-        }
-      });
-    }
+    const computedIxtrans = value * -5;
+    eleRefs.current.forEach((el) => {
+      if (el) {
+        value <= 16
+          ? (el.style.transform = `translateX(${computedIxtrans}px)`)
+          : (el.style.transform = `translateX(-80px)`);
+      }
+    });
   }, [eleProgress]);
 
   return (
@@ -53,10 +56,11 @@ export default function Integrations() {
             Effortless Setup
           </h1>
 
-          <div className="inner-bottom-white flex w-full items-center justify-center">
+          <div className="inner-bottom-white flex w-full items-start justify-center overflow-hidden  z-0  h-[200px] md:h-[300px] lg:h-[400px]">
+            <div className="absolute  inset-x-0 z-40 h-[200px] md:h-[300px] lg:h-[400px] inner-bottom-white"></div>
             <div
               ref={arc.ref}
-              className="inner-bottom-white relative size-100 rounded-full bg-gradient-to-b from-sky-200 via-white to-white md:size-[700px]"
+              className="inner-bottom-white from-arc-blue relative mt-10 size-100 rounded-full bg-gradient-to-b via-white to-white  md:size-[700px] lg:size-[1000px] -z-10 "
             >
               {items.map((item, i) => (
                 <div
@@ -65,7 +69,7 @@ export default function Integrations() {
                 >
                   <div
                     ref={(el) => (eleRefs.current[i] = el)}
-                    className="from-card-left to-card-right flex size-10 translate-x-12 items-center justify-center rounded-2xl border border-white bg-gradient-to-br shadow-md md:size-16 md:translate-x-16"
+                    className="from-card-left to-card-right flex size-10 translate-x-12 items-center justify-center rounded-2xl border border-white bg-gradient-to-br shadow-md md:size-20 md:translate-x-16"
                   >
                     <img
                       src={item.image}
@@ -80,7 +84,7 @@ export default function Integrations() {
         </div>
       </div>
 
-      <div className="h-screen"></div>
+      
     </Element>
   );
 }
