@@ -19,12 +19,12 @@ export default function Reviews() {
           </h1>
         </div>
         <div className="overflow-hidden inner-y-white  ">
-          <div className="flex items-center gap-10 px-5 py-4 lg:gap-20 animate-scroll-review-x relative -z-30 ">
+          <div className="flex items-center gap-10 px-5 py-4 lg:gap-10 animate-scroll-review-x relative -z-30 ">
             {         
             testimonials.map((items) => (
               <div
                 key={items.id}
-                className="bg-secondary relative flex h-64 max-w-xs min-w-xs flex-col gap-10 rounded-xl px-10 py-5 shadow-xl md:h-60 md:max-w-md"
+                className="bg-secondary relative flex h-64 max-w-xs min-w-xs flex-col gap-5 rounded-xl px-10 py-5 shadow-xl md:h-60 md:max-w-md"
               >
                 <div className="flex gap-1.5">
                   {[1, 2, 3, 4, 5].map((i) => (
@@ -53,12 +53,12 @@ export default function Reviews() {
           </div>
         </div>
         <div className="overflow-hidden inner-y-white  ">
-          <div className="flex items-center gap-10 px-5 py-4 lg:gap-20 animate-scroll-review-xrev -translate-x-[100%] relative -z-30 ">
+          <div className="flex items-center gap-10 px-5 py-4 lg:gap-10 animate-scroll-review-xrev -translate-x-[100%] relative -z-30 ">
             {         
             testimonials.map((items) => (
               <div
                 key={items.id}
-                className="bg-secondary relative flex h-64 max-w-xs min-w-xs flex-col gap-10 rounded-xl px-10 py-5 shadow-xl md:h-60 md:max-w-md"
+                className="bg-secondary relative flex h-64 max-w-xs min-w-xs flex-col gap-5 rounded-xl px-10 py-5 shadow-xl md:h-60 md:max-w-md"
               >
                 <div className="flex gap-1.5">
                   {[1, 2, 3, 4, 5].map((i) => (
@@ -87,7 +87,7 @@ export default function Reviews() {
           </div>
         </div>
         <div className="flex justify-center items-center mt-20 ">
-             <div className="flex flex-col md:flex-row md:gap-7 gap-3  ">
+             <div className="flex flex-col md:flex-row md:gap-7 gap-3">
                 <div className="flex flex-col">
                     <p className="text-6xl font-medium text-center"> <CountUp end={23} duration={2} enableScrollSpy scrollSpyOnce />K+</p>
                     <p className="text-gray-500 text-center text-sm md:text-lg">Happy Users</p>
