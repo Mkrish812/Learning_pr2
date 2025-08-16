@@ -1,0 +1,103 @@
+  import cli1 from "../assets/Reviews/client1.jpg";
+
+  const testimonials = [
+    {
+      id: 1,
+      rating: 5,
+      text: "The attention to detail in Lunera is unmatched. Our clients love the polished feel!",
+      image: cli1,
+      name: "Alex Carter",
+      title: "Product Manager, Stellar Apps",
+    },
+    {
+      id: 2,
+      rating: 5,
+      text: "Lunera transformed our workflow completely. The intuitive interface saved us hours every week.",
+      image: cli1,
+      name: "Maya Lin",
+      title: "UX Designer, Bright Labs",
+    },
+    {
+      id: 3,
+      rating: 5,
+      text: "I was impressed by how quickly Lunera integrated with our existing systems. Highly recommend!",
+      image: cli1,
+      name: "Jordan Lee",
+      title: "CTO, NextGen Tech",
+    },
+    {
+      id: 4,
+      rating: 5,
+      text: "The attention to detail in Lunera is unmatched. Our clients love the polished feel!",
+      image: cli1,
+      name: "Alex Carter",
+      title: "Product Manager, Stellar Apps",
+    },
+    {
+      id: 5,
+      rating: 5,
+      text: "Lunera transformed our workflow completely. The intuitive interface saved us hours every week.",
+      image: cli1,
+      name: "Maya Lin",
+      title: "UX Designer, Bright Labs",
+    },
+    {
+      id: 6,
+      rating: 5,
+      text: "I was impressed by how quickly Lunera integrated with our existing systems. Highly recommend!",
+      image: cli1,
+      name: "Jordan Lee",
+      title: "CTO, NextGen Tech",
+    },
+    {
+      id: 7,
+      rating: 5,
+      text: "The attention to detail in Lunera is unmatched. Our clients love the polished feel!",
+      image: cli1,
+      name: "Alex Carter",
+      title: "Product Manager, Stellar Apps",
+    },
+    {
+      id: 8,
+      rating: 5,
+      text: "Lunera transformed our workflow completely. The intuitive interface saved us hours every week.",
+      image: cli1,
+      name: "Maya Lin",
+      title: "UX Designer, Bright Labs",
+    },
+    {
+      id: 9,
+      rating: 5,
+      text: "I was impressed by how quickly Lunera integrated with our existing systems. Highly recommend!",
+      image: cli1,
+      name: "Jordan Lee",
+      title: "CTO, NextGen Tech",
+    },
+    {
+      id: 10,
+      rating: 5,
+      text: "The attention to detail in Lunera is unmatched. Our clients love the polished feel!",
+      image: cli1,
+      name: "Alex Carter",
+      title: "Product Manager, Stellar Apps",
+    },
+    {
+      id: 11,
+      rating: 5,
+      text: "Lunera transformed our workflow completely. The intuitive interface saved us hours every week.",
+      image: cli1,
+      name: "Maya Lin",
+      title: "UX Designer, Bright Labs",
+    },
+    {
+      id: 12,
+      rating: 5,
+      text: "I was impressed by how quickly Lunera integrated with our existing systems. Highly recommend!",
+      image: cli1,
+      name: "Jordan Lee",
+      title: "CTO, NextGen Tech",
+    },
+  ];
+
+
+  export default testimonials;

@@ -13,8 +13,39 @@
   --color-card-left:#f2f2f2;
   --color-arc-blue:#ebf2ff;
    --animate-slow-spin: slow-spin 6s linear infinite;
+   --animate-scroll-x: scroll-x 20s linear infinite;
+   --animate-scroll-review-x: scroll-review-x 20s linear infinite;
+   --animate-scroll-review-xrev: scroll-review-xrev 20s linear infinite;
 
 }
+
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}
+
+
+@keyframes scroll-review-x {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scroll-review-xrev {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 
 @keyframes slow-spin {
   0% {
@@ -33,7 +64,9 @@
 
 @utility inner-bottom-white {
   box-shadow: inset 0 -50px 30px 0px  white;
-  
+}
+@utility inner-y-white {
+  box-shadow: inset 50px 0px 30px 0px  white , inset -50px 0px 30px 0px  white;
 }
 
 /* Works in Chrome, Edge, Safari */

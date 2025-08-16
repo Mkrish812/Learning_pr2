@@ -27,24 +27,25 @@ export default function HowWorks() {
       id: 3,
       icon: <TrendingUp strokeWidth={1} size={20} />,
       title: "Grow Smarter, Faster",
-      description: "Use insights and reports to guide better business decisions.",
+      description:
+        "Use insights and reports to guide better business decisions.",
       image: h3,
       gradient: "from-purple-400 to-purple-600",
     },
   ];
 
   return (
-    <Element name="howworks" className="mt-10 container ">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
+    <Element name="howworks" className="container mt-10">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {/* Left column - Sticky heading */}
-        <div className="sticky top-0  md:h-screen flex flex-col ">
-          <div className="py-20 ">
-            <h3 className="mx-auto rounded-3xl bg-white px-3 py-1 text-sm text-gray-500 shadow-xl w-fit">
+        <div className="sticky top-0 flex flex-col md:h-screen">
+          <div className="py-20">
+            <h3 className="mx-auto w-fit rounded-3xl bg-white px-3 py-1 text-sm text-gray-500 shadow-xl">
               How it works
             </h3>
             <h1 className="mt-4 text-center text-2xl font-semibold lg:text-5xl">
-              From setup to insight—<br /> just three simple steps.
+              From setup to insight—
+              <br /> just three simple steps.
             </h1>
           </div>
         </div>
@@ -52,9 +53,8 @@ export default function HowWorks() {
           {cards.map((c) => (
             <div
               key={c.id}
-              className="sticky top-20 from-card-left to-card-right mb-10 flex flex-col justify-between rounded-2xl border border-white bg-gradient-to-br px-14 py-10 shadow-xl shadow-black/10 md:h-96"
+              className="from-card-left to-card-right sticky top-20 mb-10 flex flex-col justify-between rounded-2xl border border-white bg-gradient-to-br px-14 py-10 shadow-xl shadow-black/10 md:h-96"
             >
-              
               <div className="flex flex-col gap-5 lg:flex-row lg:gap-10">
                 <div className="flex size-12 items-center justify-center rounded-full bg-blue-600 text-white">
                   {c.icon}
@@ -65,13 +65,17 @@ export default function HowWorks() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-center mt-6">
+              <div className="mt-6 flex items-center justify-center">
                 <img src={c.image} className="lg:h-60" alt={c.title} />
+              </div>
+              <div className="bg-gray-200 text-gray-500 size-8 text-sm rounded-full flex justify-center items-center absolute top-5 lg:bottom-5 right-5">
+                    <span>0{c.id}</span>
               </div>
             </div>
           ))}
         </div>
       </div>
+      
     </Element>
   );
 }

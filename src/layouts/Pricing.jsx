@@ -4,7 +4,7 @@ import { Element } from "react-scroll";
 
 export default function Pricing() {
   return (
-    <Element name="integrations" className="bg-primary mt-10">
+    <Element name="integrations" className="bg-primary mt-10 py-10">
       <div className="container">
         <div className="flex flex-col gap-5 py-10">
           <h3 className="mx-auto rounded-3xl bg-white px-5 py-1 text-sm text-gray-500 shadow-xl">
@@ -63,7 +63,7 @@ export default function Pricing() {
           <div className="flex w-full max-w-md flex-col rounded-2xl pb-1 px-1 bg-transparent z-0 shadow-lg md:max-w-none relative overflow-hidden ">
             <div className="absolute inset-0 bg-gradient-to-bl from-violet-700 via-sky-500 to-blue-500 -z-10 animate-slow-spin scale-200 lg:scale-170"></div>
             <p className="py-3 text-center text-sm text-white">Best Deal</p>
-            <div className="flex flex-col gap-3 rounded-2xl bg-white px-6 py-10 shadow-lg md:flex-row  lg:flex-col">
+            <div className="flex flex-col gap-3 rounded-2xl bg-white px-6 py-10 shadow-md md:flex-row  lg:flex-col">
               <div className="flex flex-col gap-3 md:flex-1 md:gap-x-7">
                 <div className="flex items-center gap-3">
                   <span className="bg-secondary flex size-10 items-center justify-center rounded-full">
