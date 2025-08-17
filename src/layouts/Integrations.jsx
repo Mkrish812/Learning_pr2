@@ -56,11 +56,11 @@ export default function Integrations() {
             Effortless Setup
           </h1>
 
-          <div className="inner-bottom-white flex w-full items-start justify-center overflow-hidden  z-0  h-[200px] md:h-[300px] lg:h-[400px]">
-            <div className="absolute  inset-x-0 z-40 h-[200px] md:h-[300px] lg:h-[400px] inner-bottom-white"></div>
+          <div className="inner-bottom-white z-0 flex h-[200px] w-full items-start justify-center overflow-hidden md:h-[300px] lg:h-[400px]">
+            <div className="inner-bottom-white absolute inset-x-0 z-40 h-[200px] md:h-[300px] lg:h-[400px]"></div>
             <div
               ref={arc.ref}
-              className="inner-bottom-white from-arc-blue relative mt-10 size-100 rounded-full bg-gradient-to-b via-white to-white  md:size-[700px] lg:size-[1000px] -z-10 "
+              className="inner-bottom-white  relative -z-10 mt-10 size-100 rounded-full bg-gradient-to-b via-white from-arc-blue to-white md:size-[700px] lg:size-[1000px]"
             >
               {items.map((item, i) => (
                 <div
@@ -83,8 +83,6 @@ export default function Integrations() {
           </div>
         </div>
       </div>
-
-      
     </Element>
   );
 }

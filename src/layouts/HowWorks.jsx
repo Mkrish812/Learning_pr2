@@ -53,7 +53,7 @@ export default function HowWorks() {
           {cards.map((c) => (
             <div
               key={c.id}
-              className="from-card-left to-card-right sticky top-20 mb-10 flex flex-col justify-between rounded-2xl border border-white bg-gradient-to-br px-14 py-10 shadow-xl shadow-black/10 md:h-96"
+              className="from-card-left to-card-right r sticky top-20 mb-10 flex flex-col justify-between rounded-2xl border border-white bg-gradient-to-b px-14 py-10 shadow-xl shadow-black/10 md:h-96"
             >
               <div className="flex flex-col gap-5 lg:flex-row lg:gap-10">
                 <div className="flex size-12 items-center justify-center rounded-full bg-blue-600 text-white">
@@ -68,14 +68,13 @@ export default function HowWorks() {
               <div className="mt-6 flex items-center justify-center">
                 <img src={c.image} className="lg:h-60" alt={c.title} />
               </div>
-              <div className="bg-gray-200 text-gray-500 size-8 text-sm rounded-full flex justify-center items-center absolute top-5 lg:bottom-5 right-5">
-                    <span>0{c.id}</span>
+              <div className="absolute top-5 right-5 flex size-8 items-center justify-center rounded-full bg-gray-200 text-sm text-gray-500 lg:bottom-5">
+                <span>0{c.id}</span>
               </div>
             </div>
           ))}
         </div>
       </div>
-      
     </Element>
   );
 }

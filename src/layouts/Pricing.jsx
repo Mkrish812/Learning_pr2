@@ -4,7 +4,7 @@ import { Element } from "react-scroll";
 
 export default function Pricing() {
   return (
-    <Element name="integrations" className="bg-primary mt-10 py-10">
+    <Element name="pricing" className="bg-primary mt-10 py-10">
       <div className="container">
         <div className="flex flex-col gap-5 py-10">
           <h3 className="mx-auto rounded-3xl bg-white px-5 py-1 text-sm text-gray-500 shadow-xl">
@@ -60,10 +60,10 @@ export default function Pricing() {
             </div>
           </div>
           {/* card------------------------------------2 */}
-          <div className="flex w-full max-w-md flex-col rounded-2xl pb-1 px-1 bg-transparent z-0 shadow-lg md:max-w-none relative overflow-hidden ">
-            <div className="absolute inset-0 bg-gradient-to-bl from-violet-700 via-blue-500 to-violet-500 -z-10 backdrop-blur-3xl animate-slow-spin scale-200 md:scale-220 lg:scale-200"></div>
+          <div className="relative z-0 flex w-full max-w-md flex-col overflow-hidden rounded-2xl bg-transparent px-1 pb-1 shadow-lg md:max-w-none">
+            <div className="animate-slow-spin absolute inset-0 -z-10 scale-200 bg-gradient-to-bl from-violet-700 via-blue-500 to-violet-500 backdrop-blur-3xl md:scale-220 lg:scale-200"></div>
             <p className="py-3 text-center text-sm text-white">Best Deal</p>
-            <div className="flex flex-col gap-3 rounded-2xl bg-white px-6 py-10 shadow-md md:flex-row  lg:flex-col">
+            <div className="flex flex-col gap-3 rounded-2xl bg-white px-6 py-10 shadow-md md:flex-row lg:flex-col">
               <div className="flex flex-col gap-3 md:flex-1 md:gap-x-7">
                 <div className="flex items-center gap-3">
                   <span className="bg-secondary flex size-10 items-center justify-center rounded-full">
@@ -78,7 +78,7 @@ export default function Pricing() {
                 <p className="text-gray-500">
                   Ideal for growing teams who need deeper insights.
                 </p>
-                <button className=" rounded-3xl bg-gradient-to-bl from-blue-500 via-blue-600 to-blue-300 py-3 text-center font-semibold text-white shadow-lg">
+                <button className="rounded-3xl bg-gradient-to-bl from-blue-500 via-blue-600 to-blue-300 py-3 text-center font-semibold text-white shadow-lg">
                   Get Started
                 </button>
               </div>

@@ -3,6 +3,22 @@ import { Element, Link } from "react-scroll";
 
 
 export default function Footer() {
+    const navLinks = [
+  { label: "Home", to: "home" },
+  { label: "Features", to: "features" },
+  { label: "Pricing", to: "pricing" },
+  { label: "Integrations", to: "integrations" },
+  { label: "Contact", to: "getintouch" },
+];
+
+const extraLinks = [
+  { label: "FAQ", to: "faqs" },
+  { label: "Blogs", to: "blog" },
+  { label: "Testimonials", to: "reviews" },
+  { label: "Terms", to: "terms" },
+  { label: "Privacy Policy", to: "privacy" },
+];
+
   return (
     <Element name="footer" className="bg-primary mt-10">
       <div className="container py-10 md:px-20">
@@ -31,20 +47,34 @@ export default function Footer() {
         </div>
 
         <div className="flex gap-10 md:gap-20 text-gray-500">
-            <div className="flex flex-col gap-3 ">
-            <Link className="cursor-pointer"> Home</Link>
-            <Link className="cursor-pointer"> Features</Link>
-            <Link className="cursor-pointer"> Pricing</Link>
-            <Link className="cursor-pointer"> Integrations</Link>
-            <Link className="cursor-pointer"> Contact</Link>
-            </div>
-            <div className="flex flex-col gap-3 ">
-            <Link className="cursor-pointer"> FAQ</Link>
-            <Link className="cursor-pointer"> Blogs</Link>
-            <Link className="cursor-pointer"> Testimonials</Link>
-            <Link className="cursor-pointer"> Terms</Link>
-            <Link className="cursor-pointer"> Privacy Policy</Link>
-            </div>
+            <div className="flex flex-col gap-3">
+  {navLinks.map(({ label, to }) => (
+    <Link
+      key={to}
+      to={to}
+      smooth={true}
+      duration={500}
+      className="cursor-pointer"
+    >
+      {label}
+    </Link>
+  ))}
+</div>
+
+<div className="flex flex-col gap-3">
+  {extraLinks.map(({ label, to }) => (
+    <Link
+      key={to}
+      to={to}
+      smooth={true}
+      duration={500}
+      className="cursor-pointer"
+    >
+      {label}
+    </Link>
+  ))}
+</div>
+
 
         </div> 
         </div>
