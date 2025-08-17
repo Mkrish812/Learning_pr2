@@ -5,17 +5,6 @@ import NavItemLinks from "../components/NavItemLinks";
 
 export default function NavBar() {
   const [isOpen, setisOpen] = useState(false);
-  const navItems = [
-    { label: "Home", toWhere: "home" },
-    { label: "Features", toWhere: "features" },
-    { label: "Integrations", toWhere: "integrations" },
-    { label: "How it works", toWhere: "howworks" },
-    { label: "Pricing", toWhere: "pricing" },
-    { label: "Reviews", toWhere: "reviews" },
-    { label: "FAQ's", toWhere: "faqs" },
-    { label: "Contact", toWhere: "getintouch" },
-    { label: "Blogs", toWhere: "blog" },
-  ];
 
   return (
     <>
@@ -44,14 +33,16 @@ export default function NavBar() {
               className={`from-card-left to-card-right absolute right-1/2 translate-x-1/2 cursor-pointer rounded-full border border-white bg-gradient-to-b shadow-xl shadow-black/10 transition-all duration-500 ease-in-out ${isOpen ? "top-5 size-10 rotate-0 p-2" : "-top-10 size-0 rotate-360"}`}
             />
           </div>
-          <div
-            className={`absolute inset-x-0 mt-5 flex flex-col py-5 gap-5 ${isOpen ? "h-screen translate-y-0" : "h-0 -translate-y-96"} overflow-hidden transition-all duration-500 ease-in-out`}
-          >
-            {navItems.map(({ label, toWhere }) => (
-              <NavItemLinks key={toWhere} setisOpen={setisOpen} isOpen={isOpen} toWhere={toWhere}>
-                {label}
-              </NavItemLinks>
-            ))}
+          <div className="mt-5 flex flex-col gap-5">
+            <NavItemLinks toWhere={"home"}>Home</NavItemLinks>
+            <NavItemLinks toWhere={"features"}>Features</NavItemLinks>
+            <NavItemLinks toWhere={"integrations"}>Integrations</NavItemLinks>
+            <NavItemLinks toWhere={"howworks"}>How it works</NavItemLinks>
+            <NavItemLinks toWhere={"pricing"}>Pricing</NavItemLinks>
+            <NavItemLinks toWhere={"reviews"}>Reviews</NavItemLinks>
+            <NavItemLinks toWhere={"faqs"}>FAQ's</NavItemLinks>
+            <NavItemLinks toWhere={"getintouch"}>Contact</NavItemLinks>
+            <NavItemLinks toWhere={"blog"}>Blogs</NavItemLinks>
           </div>
         </div>
       </div>
