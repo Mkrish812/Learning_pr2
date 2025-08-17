@@ -45,7 +45,7 @@ export default function NavBar() {
             />
           </div>
           <div
-            className={`absolute inset-x-0 mt-5 flex flex-col gap-5 py-5 ${isOpen ? "h-screen translate-y-0" : "h-0 -translate-y-96"} transform overflow-hidden transition-transform  duration-500 ease-in-out`}
+            className={`absolute inset-x-0 mt-5 flex flex-col gap-5 py-5 ${isOpen ? "h-screen translate-y-0" : "h-0 -translate-y-96"} transform overflow-hidden  transition-all  duration-500 ease-linear `}
           >
             {navItems.map(({ label, toWhere }) => (
               <NavItemLinks
