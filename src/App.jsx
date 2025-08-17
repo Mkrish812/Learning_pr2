@@ -8,6 +8,9 @@ import Pricing from "./layouts/Pricing";
 import Reviews from "./layouts/Reviews";
 import Faq from "./layouts/Faq";
 import Blog from "./layouts/Blog";
+import Footer from "./layouts/Footer";
+import GetInTouch from "./layouts/GetInTouch";
+
 
 
 
@@ -23,9 +26,10 @@ export default function App() {
       <Pricing />
       <Reviews />
       <Faq />
+      <GetInTouch />
       <Blog />
+      <Footer />
 
-      <div className="h-screen"></div>
       
     </>
   );

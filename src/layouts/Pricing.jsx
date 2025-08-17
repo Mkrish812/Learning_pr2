@@ -61,7 +61,7 @@ export default function Pricing() {
           </div>
           {/* card------------------------------------2 */}
           <div className="flex w-full max-w-md flex-col rounded-2xl pb-1 px-1 bg-transparent z-0 shadow-lg md:max-w-none relative overflow-hidden ">
-            <div className="absolute inset-0 bg-gradient-to-bl from-violet-700 via-blue-500 to-violet-500 -z-10 backdrop-blur-3xl animate-slow-spin scale-200 md:scale-220 lg:scale-170"></div>
+            <div className="absolute inset-0 bg-gradient-to-bl from-violet-700 via-blue-500 to-violet-500 -z-10 backdrop-blur-3xl animate-slow-spin scale-200 md:scale-220 lg:scale-200"></div>
             <p className="py-3 text-center text-sm text-white">Best Deal</p>
             <div className="flex flex-col gap-3 rounded-2xl bg-white px-6 py-10 shadow-md md:flex-row  lg:flex-col">
               <div className="flex flex-col gap-3 md:flex-1 md:gap-x-7">
