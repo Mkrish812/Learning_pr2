@@ -12,7 +12,7 @@ export default function NavItemLinks({ children, toWhere, isOpen, setisOpen }) {
       activeClass="scale-115 lg:scale-120  border  shadow-2xl "
       className={`from-card-left group to-card-right mx-auto flex h-8 max-w-md min-w-xs cursor-pointer flex-col items-center justify-center 
         overflow-hidden rounded-2xl border-blue-200 bg-gradient-to-br py-5 shadow-xl shadow-black/10 
-        transition-transform duration-500 ease-in-out
+        transition-all duration-500 ease-in-out
         `}
     >
       <div className="flex w-full items-center gap-5">

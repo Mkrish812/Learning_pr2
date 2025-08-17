@@ -35,20 +35,25 @@ export default function NavBar() {
       </nav>
 
       <div
-        className={`fixed top-0 left-0 z-50 w-screen overflow-hidden bg-black/20 backdrop-blur-lg transition-all duration-500 ease-in-out ${isOpen ? "h-screen" : "h-0"}`}
+        className={`fixed top-0 left-0 z-50 w-screen overflow-hidden bg-black/20 backdrop-blur-lg transition-[height] duration-500 ease-in-out ${isOpen ? "h-screen" : "h-0"}`}
       >
         <div className="container h-screen">
           <div className="relative h-20">
             <X
               onClick={() => setisOpen((i) => !i)}
-              className={`from-card-left to-card-right absolute right-1/2 translate-x-1/2 cursor-pointer rounded-full border border-white bg-gradient-to-b shadow-xl shadow-black/10 transition-all duration-500 ease-in-out ${isOpen ? "top-5 size-10 rotate-0 p-2" : "-top-10 size-0 rotate-360"}`}
+              className={`from-card-left to-card-right absolute right-1/2 translate-x-1/2 transform cursor-pointer rounded-full border border-white bg-gradient-to-b shadow-xl shadow-black/10 transition-transform duration-500 ease-in-out ${isOpen ? "top-5 size-10 rotate-0 p-2" : "-top-10 size-0 rotate-360"}`}
             />
           </div>
           <div
-            className={`absolute inset-x-0 mt-5 flex flex-col py-5 gap-5 ${isOpen ? "h-screen translate-y-0" : "h-0 -translate-y-96"} overflow-hidden transition-all duration-500 ease-in-out`}
+            className={`absolute inset-x-0 mt-5 flex flex-col gap-5 py-5 ${isOpen ? "h-screen translate-y-0" : "h-0 -translate-y-96"} transform overflow-hidden transition-transform  duration-500 ease-in-out`}
           >
             {navItems.map(({ label, toWhere }) => (
-              <NavItemLinks key={toWhere} setisOpen={setisOpen} isOpen={isOpen} toWhere={toWhere}>
+              <NavItemLinks
+                key={toWhere}
+                setisOpen={setisOpen}
+                isOpen={isOpen}
+                toWhere={toWhere}
+              >
                 {label}
               </NavItemLinks>
             ))}
